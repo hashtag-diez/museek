@@ -7,11 +7,9 @@ import { AppBox } from '../style/GlobalStyles'
 import { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 function Home() {
-  const [Log,setLog] = useState(false)
-  const [Sign,setSign] = useState(false)
+  const [Sign, setSign] = useState(false)
   const handleClick = (e, type) => {
     e.preventDefault()
-    if (type === 'log') setLog(true)
     if (type === 'sign') setSign(true)
   }
   if (Sign) {
@@ -26,9 +24,9 @@ function Home() {
       </h1>
       <Musician style={{ margin: '100px 0px' }} />
       <Button color='#2E1805' active='true' content='GET STARTED' onClick={(e) => handleClick(e, 'sign')} />
-      <a onClick={(e) => handleClick(e, 'log')} href="">
+      <div onClick={(e) => handleClick(e, 'log')}>
         Login to your Account
-      </a>
+      </div>
     </HomeBox>
   )
 }
@@ -46,12 +44,13 @@ const HomeBox = styled(AppBox)`
     margin-top: 1em;
     width: auto;
   }
-  > a{
+  > div{
     font-weight: 700;
     color: inherit;
     text-decoration: none;
     margin-top: 16px;
     margin-bottom: 1em;
+    border: 0;
   }
 `
 export default Home

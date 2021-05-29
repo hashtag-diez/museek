@@ -20,7 +20,6 @@ const Button = ({ color, active, content, onClick }) => {
 
 const AppButton = styled.button`
   color: white;
-
   font-family: inherit;
   letter-spacing: 0.1em;
   margin: 10px;
