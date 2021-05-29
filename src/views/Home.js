@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import GlobalFonts from '../style/fonts'
 import { ReactComponent as Musician } from '../musician.svg'
+import { ReactComponent as Logo } from '../MUSEEK.svg'
 import Button from '../components/Button'
 import { AppBox } from '../style/GlobalStyles'
 import { useState } from 'react'
@@ -19,44 +20,38 @@ function Home() {
   return (
     <HomeBox>
       <GlobalFonts />
-      <img src='logo.png' alt='Logo de l app' />
-      <Musician />
+      <Logo style={{ marginBottom: '0px' }} />
       <h1>
-        NO MORE <br /> LONELY DAYS
+        END YOUR SOLOIST CAREER
       </h1>
-      <Button onClick={(e) => handleClick(e, 'sign')} />
+      <Musician style={{ margin: '100px 0px' }} />
+      <Button color='#2E1805' active='true' content='GET STARTED' onClick={(e) => handleClick(e, 'sign')} />
       <a onClick={(e) => handleClick(e, 'log')} href="">
-        login with email
+        Login to your Account
       </a>
     </HomeBox>
   )
 }
 
 const HomeBox = styled(AppBox)`
-  > img{
-    display: flex;
-    height: 80px;
-  }
+  justify-content: flex-start;
+  column-gap: 10px;
   > svg {
-    display: flex;
-    height: 220px;
-    justify-self: center;
-    flex: 0 1 auto;
-    margin-top: 4rem;
+    margin: 4rem 0rem;
   }
   > h1 {
-    font-weight: 900;
-    font-style: italic;
-    text-align: center;
+    font-weight: 400;
     margin: 0;
-    font-size: 3em;
-    margin-bottom: 2em;
+    font-size: 15px;
+    margin-top: 1em;
+    width: auto;
   }
   > a{
+    font-weight: 700;
     color: inherit;
     text-decoration: none;
+    margin-top: 16px;
     margin-bottom: 1em;
   }
-
 `
 export default Home

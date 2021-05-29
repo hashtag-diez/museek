@@ -5,7 +5,7 @@ export const AppBox = styled.main`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color : white;
+  background-color : #ecf0f1;
   width: min(414px,100%);
   height: 100%;
   font-family: 'Open Sans';

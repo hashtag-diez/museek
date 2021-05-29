@@ -1,26 +1,37 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Button = ({ onClick }) => {
+const Button = ({ color, active, content, onClick }) => {
+  const handleClick = (e) => {
+    if (active !== 'false') onClick(e)
+  }
   return (
     <AppButton
-      onClick={onClick}
+      color={color}
+      onClick={(e) => handleClick(e)}
+      active={active}
     >
-      get started
+      {
+        content
+      }
     </AppButton>
   )
 }
 
 const AppButton = styled.button`
   color: white;
-  margin-top: 20px;
-  padding: 1em 5em;
+
+  font-family: inherit;
+  letter-spacing: 0.1em;
+  margin: 10px;
+  padding: 12px 60px;
   border-radius: 40px;
-  font-weight: 600;
-  background-color: black;
+  font-weight: 700;
+  opacity: ${(props) => (props.active === 'true' ? '1' : '0.5')};
+  background-color: ${(props) => (props.color)};
   outline: none;
   border: none;
-  font-size: 1.1em;
+  font-size: 17px;
 `
 
 export default Button
