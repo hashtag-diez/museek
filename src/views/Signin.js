@@ -228,7 +228,7 @@ const Signin = () => {
             <h4>Identity</h4>
             <p>
               {
-                Object.keys(Infos[0]).map
+                //Object.values(Infos[0]).toString()
               }
             </p>
           </StyledSpan>
@@ -355,6 +355,7 @@ const StyledMain = styled.main`
   }
 `
 const StyledSpan = styled.span`
+  width: inherit;
   p {
     font-family: 'Nunito';
     text-align: start;
@@ -363,6 +364,7 @@ const StyledSpan = styled.span`
     color: #AFA79F;
     width: inherit;
     margin: 0;
+    overflow-wrap: break-word;    
   }
 `
 const SigninBox = styled.form`
