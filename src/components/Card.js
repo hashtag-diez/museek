@@ -1,36 +1,42 @@
-import React from 'react'
+import React, { createRef } from 'react'
 import styled from 'styled-components'
 import { ReactComponent as Cross } from '../cross.svg'
 import { ReactComponent as Heart } from '../heart.svg'
+import TinderCard from 'react-tinder-card'
 
 const Card = ({ name, age, rule, image }) => {
+  const CardRef = createRef()
+  const handleLike = () => CardRef.current.swipe('right')
+  const handleRefuse = () => CardRef.current.swipe('left')
   return (
-    <CardDiv image={image}>
-      <CardMain>
-        <CardSect>
-          <div>
-            <h3>
-              {
-                name
-              }
-            </h3>
-            <p>
-              {
-                age + ', ' + rule
-              }
-            </p>
-          </div>
-          <ButtonDiv>
-            <CardButton>
-              <Cross />
-            </CardButton>
-            <CardButton>
-              <Heart />
-            </CardButton>
-          </ButtonDiv>
-        </CardSect>
-      </CardMain>
-    </CardDiv>
+    <TinderCard flickOnSwipe={false} ref={CardRef}>
+      <CardDiv image={image}>
+        <CardMain>
+          <CardSect>
+            <div>
+              <h3>
+                {
+                  name
+                }
+              </h3>
+              <p>
+                {
+                  age + ', ' + rule
+                }
+              </p>
+            </div>
+            <ButtonDiv>
+              <CardButton onClick={() => handleRefuse()}>
+                <Cross />
+              </CardButton>
+              <CardButton onClick={() => handleLike()}>
+                <Heart />
+              </CardButton>
+            </ButtonDiv>
+          </CardSect>
+        </CardMain>
+      </CardDiv>
+    </TinderCard>
   )
 }
 const CardDiv = styled.div`
@@ -81,6 +87,7 @@ const CardButton = styled.div`
   padding: 20px;
   border-radius: 50px;
   background: #FFFFFF;
+  cursor: pointer;
 `
 const ButtonDiv = styled.div`
   display: flex;
