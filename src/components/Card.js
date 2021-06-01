@@ -40,8 +40,8 @@ const Card = ({ name, age, rule, image }) => {
   )
 }
 const CardDiv = styled.div`
-  width: 355px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%), url(${props => props.image});
   background-size: cover;
   background-position: center;
@@ -50,6 +50,8 @@ const CardDiv = styled.div`
 `
 const StyledTinderCard = styled(TinderCard)`
   position: absolute;
+  height: 100% !important;
+  width: calc(100% / 4 - 60px) !important;
 `
 const CardMain = styled.main`
   display: flex;

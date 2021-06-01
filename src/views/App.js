@@ -125,7 +125,7 @@ const slide = (a, b) => keyframes`
 const StyledAppBox = styled(AppBox)`
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  gap: 30px;
   svg{
     cursor: pointer;
   }
@@ -186,7 +186,7 @@ const StyledBox = styled.section`
   display: flex;
   height: 100%;
   flex-direction: column;
-  padding: 25px 30px 25px 30px;
+  margin: 0px 30px;
   width: 90%;
   > div{
     height: 90%;
