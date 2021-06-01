@@ -184,7 +184,6 @@ const SignInCarrousel = styled.section`
 
 const StyledBox = styled.section`
   display: flex;
-  width: 100%;
   height: 100%;
   flex-direction: column;
   padding: 25px 30px 25px 30px;

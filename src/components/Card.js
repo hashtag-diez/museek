@@ -9,7 +9,7 @@ const Card = ({ name, age, rule, image }) => {
   const handleLike = () => CardRef.current.swipe('right')
   const handleRefuse = () => CardRef.current.swipe('left')
   return (
-    <TinderCard flickOnSwipe={false} ref={CardRef}>
+    <StyledTinderCard preventSwipe={['up', 'down']} ref={CardRef}>
       <CardDiv image={image}>
         <CardMain>
           <CardSect>
@@ -36,26 +36,26 @@ const Card = ({ name, age, rule, image }) => {
           </CardSect>
         </CardMain>
       </CardDiv>
-    </TinderCard>
+    </StyledTinderCard>
   )
 }
 const CardDiv = styled.div`
-  display: block;
-  max-width: 355px;
-  min-height: 600px;
-  max-height: 600px;
+  width: 355px;
+  height: 600px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%), url(${props => props.image});
   background-size: cover;
+  background-position: center;
   border-radius: 20px;
-  width: inherit;
-  height: inherit; 
+  position: relative;
+`
+const StyledTinderCard = styled(TinderCard)`
+  position: absolute;
 `
 const CardMain = styled.main`
   display: flex;
   flex-direction: column;
   height: 300%;
   width: inherit;
-  z-index: 0;
 `
 const CardSect = styled.section`
   display: flex;
