@@ -47,7 +47,7 @@ const App = () => {
         </StyledBox>
         <StyledBox>
           <StyledAside>
-            <img src='https://via.placeholder.com/75' />
+            <img src='https://via.placeholder.com/75' alt='sheesh' />
             <h3>Nom, Prénom</h3>
             <p> Edit Profile</p>
           </StyledAside>
