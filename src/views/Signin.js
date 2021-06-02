@@ -10,13 +10,7 @@ import Title from '../components/Title'
 import Input from '../components/Input'
 import Selector from '../components/Selector'
 import Tag from '../components/Tag'
-import { ReactComponent as Browser } from '../browser.svg'
-import { ReactComponent as Camera } from '../camera.svg'
-import { ReactComponent as Track } from '../audiotrack.svg'
-import { ReactComponent as Micro } from '../mic-full.svg'
-import { ReactComponent as Folders } from '../Folders.svg'
-
-
+import { Camera, Browser, Track, Folders, Micro } from '../components/Imports'
 import 'antd/dist/antd.css'
 
 const Signin = () => {

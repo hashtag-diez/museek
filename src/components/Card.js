@@ -1,7 +1,6 @@
 import React, { createRef } from 'react'
 import styled from 'styled-components'
-import { ReactComponent as Cross } from '../cross.svg'
-import { ReactComponent as Heart } from '../heart.svg'
+import { Cross, Heart2 as Heart } from '../components/Imports'
 import TinderCard from 'react-tinder-card'
 
 const Card = ({ name, age, rule, image }) => {
