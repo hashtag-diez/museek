@@ -4,6 +4,8 @@ import * as SVG from '../components/Imports'
 import Card from '../components/Card'
 import styled, { keyframes } from 'styled-components'
 import Conversation from '../components/Conversation'
+import AudioList from '../components/AudioList'
+
 const App = () => {
   const [Page, setPage] = useState(2)
   const [Next, setNext] = useState(2)
@@ -20,8 +22,7 @@ const App = () => {
       </StyledHeader>
       <SignInCarrousel curr={Page} next={Next}>
         <StyledBox>
-          <Card name='Jakayla Toney' rule='guitarist' age='21' image='https://images.unsplash.com/photo-1603545908215-1010e64eb840?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80' />
-          <Card name='Jakayla Toney1' rule='guitarist' age='21' image='https://images.unsplash.com/photo-1603545908215-1010e64eb840?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80' />
+          <AudioList />
         </StyledBox>
         <StyledBox>
           <Card name='Jakayla Toney' rule='guitarist' age='21' image='https://images.unsplash.com/photo-1603545908215-1010e64eb840?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80' />

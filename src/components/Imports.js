@@ -20,7 +20,15 @@ import { ReactComponent as Camera } from '../camera.svg'
 import { ReactComponent as Track } from '../audiotrack.svg'
 import { ReactComponent as Folders } from '../Folders.svg'
 import { ReactComponent as Dots } from '../dots.svg'
+import { ReactComponent as Music } from '../music.svg'
+import { ReactComponent as Star } from '../star.svg'
+import { ReactComponent as Trash } from '../trash.svg'
+import { ReactComponent as Play } from '../play.svg'
 
+export { Star }
+export { Trash }
+export { Play }
+export { Music }
 export { Dots }
 export { Logo }
 export { Heart }
